@@ -63,21 +63,27 @@ body {
   top: 22px;
   right: 10px;
   cursor: pointer;
+  background-color: black;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .icon span {
   width: 25px;
-  height: 3px;
-  background-color: black;
+  height: 2px;
+  background-color: white;
   display: block;
 }
 
 .icon span.one {
-  transform: rotate(314deg) translate(-2px, 1px);
+  transform: rotate(314deg) translate(8px, 6px);
 }
 
 .icon span.two {
-  transform: rotate(49deg);
+  transform: rotate(49deg) translate(-7px, 6px);
 }
 
 @media (max-width: 880px) {
@@ -93,7 +99,7 @@ body {
   justify-content: center;
   align-items: center;
   background-color: white;
-  position: absolute;
+  position: fixed;
   z-index: 500;
   top: 0;
   left: 0;
