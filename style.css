@@ -1,0 +1,106 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.search {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.search input {
+  padding: 5px;
+}
+
+.content {
+  padding: 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.content .box {
+  text-align: center;
+  cursor: pointer;
+}
+.content .box .image img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.content .box p {
+  text-align: start;
+}
+
+.page {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.page .info {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 15px;
+}
+
+.pageImage {
+  width: 400px;
+}
+
+.pageImage img {
+  max-width: 100%;
+}
+
+.pageContent {
+  width: 412px;
+}
+
+.icon {
+  position: absolute;
+  top: 22px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.icon span {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  display: block;
+}
+
+.icon span.one {
+  transform: rotate(314deg) translate(-2px, 1px);
+}
+
+.icon span.two {
+  transform: rotate(49deg);
+}
+
+@media (max-width: 880px) {
+  .page {
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+}
+
+.preLoader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  position: absolute;
+  z-index: 500;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.preLoader img {
+  width: 200px;
+}
