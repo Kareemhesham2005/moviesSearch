@@ -24,11 +24,20 @@ function postData(data) {
     let voteAvg = el.vote_average;
     let voteCount = el.vote_count;
     let id = el.id;
-    postMovies(image, title, date, overview, id, voteAvg, voteCount);
+    postMovies(image, title, date, overview, id, voteAvg, voteCount, adult);
   });
 }
 
-function postMovies(image, title, date, overview, id, voteAvg, voteCount) {
+function postMovies(
+  image,
+  title,
+  date,
+  overview,
+  id,
+  voteAvg,
+  voteCount,
+  adult
+) {
   let box = document.createElement("div");
   box.setAttribute("class", "box");
 
@@ -68,6 +77,12 @@ function postMovies(image, title, date, overview, id, voteAvg, voteCount) {
           production += `${producer.name}, `;
         }
       });
+      let sexual = "";
+      if (adult) {
+        sexual = "For Only +18";
+      } else {
+        sexual = "For All Age Groups";
+      }
       let page = document.createElement("div");
       document.querySelector(".search").style.display = "none";
       document.querySelector(".content").style.display = "none";
@@ -92,6 +107,7 @@ function postMovies(image, title, date, overview, id, voteAvg, voteCount) {
       <p>${date}</p>
       <p>${gen2}</p>
       </div>
+      <p>${sexual}</p>
       <p>${overview}</p>
       <p>Rating: ${voteAvg}</p>
       <p>${voteCount} Voted</p>
